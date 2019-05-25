@@ -10,20 +10,26 @@ export interface PersistProps {
   store?: string;
 }
 
-export class Persist extends React.Component<PersistProps, {}> {
+export interface PersistState {
+  store: Storage;
+}
+
+export class Persist extends React.Component<PersistProps, PersistState> {
   static defaultProps = {
     debounce: 300,
   };
 
-  constructor(props) {
-    super(props)
+  constructor(props: any) {
+    super(props);
     this.state = {
-      store: this.store()
-    }
+      store: this.store(),
+    };
   }
 
-  store() {
-    this.props.store === 'localStorage' ? window.localStorage : window.sessionStorage
+  store(): Storage {
+    return this.props.store === 'localStorage'
+      ? window.localStorage
+      : window.sessionStorage;
   }
 
   persist = debounce((data: any) => {

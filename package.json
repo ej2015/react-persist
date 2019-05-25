@@ -1,10 +1,10 @@
 {
-  "name": "react-persist",
+  "name": "react-persist-plus",
   "description": "Persist and rehydrate React state",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "license": "MIT",
-  "author": "Jared Palmer <jared@palmer.net>",
-  "repository": "jaredpalmer/react-persist",
+  "author": "Edgar Ji",
+  "repository": "ej2015/react-persist",
   "keywords": [
     "react",
     "react-dom",
@@ -37,13 +37,14 @@
   },
   "optionalDependencies": {},
   "devDependencies": {
+    "@types/babel-traverse": "^6.25.5",
     "@types/enzyme": "2.8.4",
     "@types/jest": "20.0.6",
     "@types/lodash.debounce": "^4.0.3",
     "@types/lodash.isequal": "4.5.2",
     "@types/node": "8.0.19",
-    "@types/prop-types": "15.5.1",
-    "@types/react": "16.0.0",
+    "@types/prop-types": "^15.7.1",
+    "@types/react": "^16.8.18",
     "@types/react-dom": "15.5.1",
     "@types/react-test-renderer": "15.5.2",
     "@types/warning": "^3.0.0",
@@ -58,7 +59,7 @@
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-test-renderer": "15.6.1",
-    "rimraf": "2.6.1",
+    "rimraf": "^2.6.1",
     "rollup": "0.45.2",
     "rollup-plugin-commonjs": "8.1.0",
     "rollup-plugin-filesize": "1.4.2",
@@ -70,7 +71,7 @@
     "tsc-watch": "1.0.7",
     "tslint": "5.5.0",
     "tslint-react": "3.2.0",
-    "typescript": "2.4.2"
+    "typescript": "^3.4.5"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [

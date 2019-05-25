@@ -1,6 +1,6 @@
 # React Persist 💾
 
-Persist and rehydrate React state to localStorage.
+Persist and rehydrate React state to storage (localStorage / sessionStorage). This is a folk from [react-persist](https://github.com/jaredpalmer/react-persist).
 
 ```
 npm install react-persist --save
@@ -12,7 +12,7 @@ Just import the `<Persist >` component and pass it the data you want it to persi
 
 ```js
 import React from 'react'
-import { Persist } from 'react-persist'
+import { Persist } from 'react-persist-plus'
 
 class Signup extends React.Component {
   state = {
@@ -34,6 +34,7 @@ class Signup extends React.Component {
           data={this.state} 
           debounce={500} 
           onMount={data => this.setState(data)}
+          store='localStorage'
         />
       </form>
     )
@@ -44,18 +45,18 @@ class Signup extends React.Component {
 
 Only a few of them!
 
-- `name: string`: LocalStorage key to save form state to
+- `store`: localStorage or sessionStorage. Defatuls to sessionStorage
+- `name: string`: Storage key to save form state to
 - `data: any`: Data to persist
 - `debounce:? number`:  Number of ms to debounce the function that saves form state. Default is `300`.
 - `onMount: (data: any) => void`: (optionally) Hydrate your data (into React state). Will only be called if data is not `null`.
 
 
-## Author
+## Original Author
 
 - Jared Palmer [@jaredpalmer](https://twitter.com/jaredpalmer)
 
 
 ## Todo
 
-- Alternative storages (localForage, sessionStorage)
 - Support AsyncStorage for React Native
