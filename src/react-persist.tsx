@@ -7,7 +7,7 @@ export interface PersistProps {
   data: any;
   debounce?: number;
   onMount: (data: any) => void;
-  store?: string;
+  store?: Storage;
 }
 
 export interface PersistState {
@@ -27,9 +27,7 @@ export class Persist extends React.Component<PersistProps, PersistState> {
   }
 
   store(): Storage {
-    return this.props.store === 'localStorage'
-      ? window.localStorage
-      : window.sessionStorage;
+    return this.props.store || window.sessionStorage;
   }
 
   persist = debounce((data: any) => {
