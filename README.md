@@ -3,7 +3,7 @@
 Persist and rehydrate React state to storage (localStorage / sessionStorage). This is a folk from [react-persist](https://github.com/jaredpalmer/react-persist).
 
 ```
-npm install react-persist --save
+npm install react-persist-plus --save
 ```
 
 # Basic Usage
@@ -50,12 +50,6 @@ Only a few of them!
 - `data: any`: Data to persist
 - `debounce:? number`:  Number of ms to debounce the function that saves form state. Default is `300`.
 - `onMount: (data: any) => void`: (optionally) Hydrate your data (into React state). Will only be called if data is not `null`.
-
-
-## Original Author
-
-- Jared Palmer [@jaredpalmer](https://twitter.com/jaredpalmer)
-
 
 ## Todo
 
