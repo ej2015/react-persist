@@ -1,7 +1,7 @@
 {
   "name": "react-persist-plus",
   "description": "Persist and rehydrate React state",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "author": "Edgar Ji",
   "repository": "ej2015/react-persist",
