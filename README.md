@@ -1,4 +1,4 @@
-# React Persist 💾
+# React Persist Plus 💾
 
 Persist and rehydrate React state to storage (e.g. localStorage, sessionStorage, AsyncStorage). This is a fork from [react-persist](https://github.com/jaredpalmer/react-persist).
 
